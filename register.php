@@ -2,10 +2,7 @@
 require_once('db.php'); // Include database connection
 
 // If the user is not logged in, redirect them to login page
-if (!isset($_SESSION['user'])) {
-    header("Location: index.php"); // Redirect to the login page if not logged in
-    exit();
-}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];  // Plain text password from form

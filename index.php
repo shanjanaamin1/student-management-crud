@@ -2,10 +2,7 @@
 session_start();
 require_once('db.php'); // Include your database connection
 // If the user is not logged in, redirect them to login page
-if (!isset($_SESSION['user'])) {
-    header("Location: index.php"); // Redirect to the login page if not logged in
-    exit();
-}
+
 // Handle login after form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];  // This will be the email for both admin and student
